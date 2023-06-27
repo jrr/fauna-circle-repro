@@ -4,12 +4,15 @@ jobs:
   say-hello:
     docker:
       - image: cimg/base:stable
-      - image: fauna/faunadb:4.22.0
+      - image: amazoncorretto:17-alpine
     steps:
       - checkout
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: sleep
+          command: sleep 20
 
 workflows:
   say-hello-workflow:
