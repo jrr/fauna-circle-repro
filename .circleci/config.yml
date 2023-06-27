@@ -4,7 +4,7 @@ jobs:
   say-hello:
     docker:
       - image: cimg/base:stable
-      - image: fauna/faunadb:4.15.0
+      - image: fauna/faunadb:4.22.0
     steps:
       - checkout
       - run:
